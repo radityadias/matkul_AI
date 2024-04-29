@@ -81,13 +81,13 @@ def kecocokan_terbaik(orang_tua):
     kecocokan = orang_tua[max(orang_tua, key=orang_tua.get)]
     return kecocokan
 
-# Fungsi untuk menampilkan hasil
+# Menampilkan hasil
 def tampilkan(orang_tua):
     selisih_waktu = datetime.datetime.now()-waktu_mulai
     print('{}\t{}%\t{}'.format(gen_terbaik(orang_tua), round(kecocokan_terbaik(orang_tua), 2), selisih_waktu))
 
 # Program utama
-target = 'Saya Kuliah di Amikom'
+target = input("Masukkan kalimat : ")
 max_populasi = 10
 tingkat_mutasi = 0.2
 
